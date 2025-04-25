@@ -1,0 +1,39 @@
+/* 1) Flex container for each message group */
+.wrapper.messages-group {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.5em 0;
+}
+
+/* 2) Your messages (double-check icon present) on the right */
+.wrapper.messages-group:has(.message-status) {
+  justify-content: flex-end;
+}
+/* 3) Everyone else’s on the left */
+.wrapper.messages-group:not(:has(.message-status)) {
+  justify-content: flex-start;
+}
+
+/* 4) Avatar spacing */
+.wrapper.messages-group .messages__avatar {
+  margin-right: 0.5em;
+}
+.wrapper.messages-group:has(.message-status) .messages__avatar {
+  margin-left: 0.5em;
+  margin-right: 0;
+}
+
+/* 5) Bubble styling */
+.wrapper.messages-group .messages {
+  max-width: 80%;
+  background: #f1f0f0;
+  /*background: var(--color-primary-element)*/
+  border-radius: 8px;
+  padding: 0.5em;
+}
+
+/* 6) Highlight your own bubbles */
+.wrapper.messages-group:has(.message-status) .messages {
+  background: #dcf8c6;
+}
+

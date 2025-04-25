@@ -8,3 +8,7 @@ declare(strict_types=1);
 
 \OCP\Util::addScript('spreed', 'talk-main');
 style('spreed', 'icons');
+
+
+// load our custom split left/right alignment CSS
+style('spreed', 'talk-custom');
