@@ -25,7 +25,7 @@
 
 /* 5) Bubble styling */
 .wrapper.messages-group .messages {
-  max-width: 80%;
+  max-width: 90%;
   background: #f1f0f0;
   /*background: var(--color-primary-element)*/
   border-radius: 8px;
@@ -34,6 +34,19 @@
 
 /* 6) Highlight your own bubbles */
 .wrapper.messages-group:has(.message-status) .messages {
-  background: #dcf8c6;
+  /*background: #dcf8c6;*/
+  background: #e5eff5;
 }
 
+
+/* overrides the anchor wrapper for quotes */
+a.quote {
+  /*  ~10 % lighter than rgb(229, 239, 245)  */
+  background-color: rgb(240, 246, 249) !important;   /* hex #F0F6F9 */
+}
+
+/* if you only want the inner blockquote tinted */
+a.quote blockquote.quote__main__text {
+  background-color: inherit;          /* matches the wrapper */
+  border-left: 3px solid #B9D0DF;     /* optional: subtle accent */
+}
